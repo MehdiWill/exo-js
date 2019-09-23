@@ -1,17 +1,21 @@
 function modifier() {
-    var text = document.getElementById('text')
-    const confirm_text = document.getElementById('confirm_text')
-    const button = document.getElementById('button')
+
+    // utiliser getElementsByTagsName
+    var text = document.getElementsByTagName("input")[0]
+    const confirm_text = document.getElementsByTagName("input")[1]
+    const button = document.getElementsByTagName("input")[2]
+
 
     if (text.value == confirm_text.value) {
-        // on ajoute une classe 'green' a l'input avec l'id button
-        button.classList.add("green");
-        button.classList.remove("red");
-        // on supprime red
+
+        // on ajoute une classe 'green' a l'input 
+        button.style.borderColor='green';
+        // on supprime red si id
     } else {
-        // on ajoute une classe 'red' a l'input avec l'id button
-        button.classList.add("red");
-        button.classList.remove("green");
+
+       
+        // on ajoute une classe 'red' a l'input avec .style
+        button.style.borderColor='red';
+
     }
 }
-
